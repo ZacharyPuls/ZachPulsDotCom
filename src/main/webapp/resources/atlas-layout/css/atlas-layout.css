@@ -1,0 +1,1424 @@
+/*
+* ATLAS LAYOUT & THEME
+* Supported Browsers > Google Chrome 3+ , Mozilla Firefox 3+ , Safari 3+ , Opera 3+ , Yandex Browser , Inernet Explorer 9+
+* Copyright 2014 - PrimeFaces Theme Market - PrimeTek */
+/* FONT-FACE*/
+@font-face {
+  font-family: 'dosismedium';
+  src: url("#{resource['primefaces-atlas:fonts/dosis-medium-webfont.eot']}");
+  src: url("#{resource['primefaces-atlas:fonts/dosis-medium-webfont.eot']}#iefix") format('embedded-opentype'), url("#{resource['primefaces-atlas:fonts/dosis-medium-webfont.woff2']}") format('woff2'), url("#{resource['primefaces-atlas:fonts/dosis-medium-webfont.woff']}") format('woff'), url("#{resource['primefaces-atlas:fonts/dosis-medium-webfont.ttf']}") format('truetype'), url("#{resource['primefaces-atlas:fonts/dosis-medium-webfont.svg']}#dosismedium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'dosisregular';
+  src: url("#{resource['primefaces-atlas:fonts/dosis-regular-webfont.eot']}");
+  src: url("#{resource['primefaces-atlas:fonts/dosis-regular-webfont.eot']}#iefix") format('embedded-opentype'), url("#{resource['primefaces-atlas:fonts/dosis-regular-webfont.woff2']}") format('woff2'), url("#{resource['primefaces-atlas:fonts/dosis-regular-webfont.woff']}") format('woff'), url("#{resource['primefaces-atlas:fonts/dosis-regular-webfont.ttf']}") format('truetype'), url("#{resource['primefaces-atlas:fonts/dosis-regular-webfont.svg']}#dosisregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'dosissemibold';
+  src: url("#{resource['primefaces-atlas:fonts/dosis-semibold-webfont.eot']}");
+  src: url("#{resource['primefaces-atlas:fonts/dosis-semibold-webfont.eot']}#iefix") format('embedded-opentype'), url("#{resource['primefaces-atlas:fonts/dosis-semibold-webfont.woff2']}") format('woff2'), url("#{resource['primefaces-atlas:fonts/dosis-semibold-webfont.woff']}") format('woff'), url("#{resource['primefaces-atlas:fonts/dosis-semibold-webfont.ttf']}") format('truetype'), url("#{resource['primefaces-atlas:fonts/dosis-semibold-webfont.svg']}#dosissemibold") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'dosislight';
+  src: url("#{resource['primefaces-atlas:fonts/dosis-light-webfont.eot']}");
+  src: url("#{resource['primefaces-atlas:fonts/dosis-light-webfont.eot']}#iefix") format('embedded-opentype'), url("#{resource['primefaces-atlas:fonts/dosis-light-webfont.woff2']}") format('woff2'), url("#{resource['primefaces-atlas:fonts/dosis-light-webfont.woff']}") format('woff'), url("#{resource['primefaces-atlas:fonts/dosis-light-webfont.ttf']}") format('truetype'), url("#{resource['primefaces-atlas:fonts/dosis-light-webfont.svg']}#dosislight") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.FontDosisSemiBold {
+  font-family: 'dosissemibold';
+}
+.FontDosisMedium {
+  font-family: 'dosismedium';
+}
+.FontDosisRegular {
+  font-family: 'dosisregular';
+}
+.FontDosisLight {
+  font-family: 'dosislight';
+}
+/*BODY*/
+html {
+  height: 100%;
+  font-size: 10px;
+}
+body {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  font-family: 'dosismedium';
+  background-color: #454546;
+}
+/* For Changing Colors Of Layout Topbar Add To Body */
+/* Defaults */
+#layout-topbar-cover {
+  background-color: #567A84;
+}
+#layout-menu-cover {
+  background-color: #3E5E66;
+}
+/* With Colors */
+.RedTopbar #layout-topbar-cover {
+  background-color: #B51F3C;
+}
+.RedTopbar #layout-menu-cover {
+  background-color: #991434;
+}
+.BlueTopbar #layout-topbar-cover {
+  background-color: #225BAF;
+}
+.BlueTopbar #layout-menu-cover {
+  background-color: #15468C;
+}
+.TealTopbar #layout-topbar-cover {
+  background-color: #109B91;
+}
+.TealTopbar #layout-menu-cover {
+  background-color: #11756B;
+}
+.GreenTopbar #layout-topbar-cover {
+  background-color: #119952;
+}
+.GreenTopbar #layout-menu-cover {
+  background-color: #11723B;
+}
+.OrangeTopbar #layout-topbar-cover {
+  background-color: #997417;
+}
+.OrangeTopbar #layout-menu-cover {
+  background-color: #705712;
+}
+.LeadenTopbar #layout-topbar-cover {
+  background-color: #567A84;
+}
+.LeadenTopbar #layout-menu-cover {
+  background-color: #3E5E66;
+}
+.YellowTopbar #layout-topbar-cover {
+  background-color: #B5B12D;
+}
+.YellowTopbar #layout-menu-cover {
+  background-color: #7F7716;
+}
+.PurpleTopbar #layout-topbar-cover {
+  background-color: #555574;
+}
+.PurpleTopbar #layout-menu-cover {
+  background-color: #3B3B54;
+}
+/* For Popup Menu Add This Class To Body */
+/* TOPBAR --------------------------------------------------------------------------------*/
+/* Layout Topbar Cover*/
+#layout-topbar-cover {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 11rem;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+}
+/* Layout Topbar */
+#layout-topbar {
+  width: 100%;
+  height: auto;
+  display: table;
+  box-sizing: border-box;
+}
+/* logo */
+#logo {
+  padding: 1.5rem 0.5rem 1.5rem 0px;
+  display: inline-block;
+  float: left;
+}
+#logo img {
+  height: 2rem;
+  vertical-align: middle;
+  width: 9.1rem;
+}
+/* menu button */
+#menu-button {
+  padding: 1.5rem;
+  float: left;
+  display: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.PopupMenu #menu-button {
+  display: inline-block;
+}
+#menu-button:hover,
+#menu-button:active,
+#menu-button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#menu-button i {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#menu-button.active i {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* top menu button */
+#topmenu-button {
+  padding: 1.5rem;
+  float: right;
+  cursor: pointer;
+  display: none;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#topmenu-button:hover,
+#topmenu-button:active,
+#topmenu-button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#topmenu-button i {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#topmenu-button.active i {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* topbar menu */
+#topbar-menu {
+  float: right;
+  margin: 0px;
+  padding: 0px;
+}
+#topbar-menu > li {
+  display: inline-block;
+  float: left;
+}
+#topbar-menu > li a {
+  padding: 1.5rem;
+  float: left;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#topbar-menu > li a:hover,
+#topbar-menu > li a:active,
+#topbar-menu > li a.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#topbar-menu > li a i {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  vertical-align: middle;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#topbar-menu > li a.active i {
+  color: rgba(0, 0, 0, 0.4);
+}
+#topbar-menu > li a .bubble {
+  background-color: #ef3f61;
+  color: #ffffff;
+  display: inline-block;
+  position: absolute;
+  padding: 0.1rem 0.4rem;
+  font-family: 'dosissemibold';
+  font-size: 1.4rem;
+  border-radius: 30px;
+  margin: -1.3rem 0px 0px -3.3rem;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+}
+#topbar-menu > li a .tb-menu-text {
+  display: none;
+}
+/* Layout Menu Cover */
+#layout-menu-cover {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 11rem;
+  position: fixed;
+  top: 5.1rem;
+  z-index: 998;
+  display: table;
+  table-layout: fixed;
+  border-bottom: solid 1px #dfe1e4;
+}
+#layout-menu-cover.active {
+  max-height: 75%;
+}
+#layout-menu {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'dosisregular';
+  display: table-row;
+}
+#layout-menu > li {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  border-right: solid 1px rgba(255, 255, 255, 0.15);
+  display: table-cell;
+  vertical-align: middle;
+}
+#layout-menu > li:first-child {
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+}
+#layout-menu > li > a {
+  display: block;
+  padding: 1rem 1rem;
+  font-size: 1.4rem;
+  font-family: 'dosisregular';
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#layout-menu > li > a:hover,
+#layout-menu > li > a:active,
+#layout-menu > li > a.active-menu {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#layout-menu > li > a i {
+  margin-right: 5px;
+  font-size: 1.5rem;
+}
+/* Second Level Of Menu */
+#layout-menu > li > ul {
+  border-bottom: solid 1px #dfe1e4;
+  border-radius: 3px;
+  position: absolute;
+  width: 21rem;
+  max-height: 40rem;
+  overflow-y: auto !important;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+#layout-menu > li ul {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  background-color: #fff;
+  overflow: hidden;
+  height: 0px;
+  display: none;
+}
+#layout-menu > li ul.active-menu {
+  height: auto;
+  display: block;
+}
+#layout-menu > li ul li {
+  display: block;
+  padding: 0px;
+  margin: 0px 0px 0px 1.7rem;
+  border-left: dashed 1px rgba(86, 122, 132, 0.2);
+}
+#layout-menu > li > ul > li {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  border-left: 0px;
+}
+#layout-menu > li ul li a {
+  display: block;
+  padding: 0.8rem 1rem;
+  font-size: 1.4rem;
+  font-family: 'dosisregular';
+  color: #567a84;
+  text-align: left;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#layout-menu > li ul li a:hover,
+#layout-menu > li ul li a:active,
+#layout-menu > li ul li a.active-menu {
+  background-color: rgba(86, 122, 132, 0.15);
+}
+#layout-menu > li ul li a i {
+  margin-right: 5px;
+  font-size: 1.5rem;
+}
+/* Layout Menu Cover ( For Popup Menu Style )*/
+.PopupMenu #layout-menu-cover {
+  width: 300px;
+  box-sizing: border-box;
+  padding: 0px;
+  left: 11rem;
+  position: fixed;
+  top: 5rem;
+  z-index: 9998;
+  height: 0px;
+  display: none;
+  border-radius: 3px;
+  border-bottom: solid 1px #dfe1e4;
+  overflow: hidden;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.PopupMenu #layout-menu-cover.active {
+  height: auto;
+  display: block;
+  max-height: 75% !important;
+  overflow-y: auto !important;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.PopupMenu #layout-menu {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'dosisregular';
+  display: block;
+}
+.PopupMenu #layout-menu > li {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  border-right: 0px;
+  display: block;
+}
+.PopupMenu #layout-menu > li:first-child {
+  border-left: 0px;
+}
+.PopupMenu #layout-menu > li > a {
+  display: block;
+  padding: 1.4rem 2rem;
+  font-size: 1.6rem;
+  font-family: 'dosisregular';
+  color: #567a84;
+  text-align: left;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.PopupMenu #layout-menu > li > a:hover,
+.PopupMenu #layout-menu > li > a:active,
+.PopupMenu #layout-menu > li > a.active-menu {
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.8);
+}
+.PopupMenu #layout-menu > li > a i {
+  margin-right: 7px;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+/* Second Level Of Menu */
+.PopupMenu #layout-menu > li ul {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: 0px;
+}
+.PopupMenu #layout-menu > li > ul {
+  border-bottom: 0px;
+  border-radius: 0;
+  position: static;
+  width: auto;
+  max-height: initial;
+  max-height: none;
+}
+.PopupMenu #layout-menu > li ul.active-menu {
+  height: auto;
+}
+.PopupMenu #layout-menu > li ul li {
+  display: block;
+  padding: 0px;
+  margin: 0px 0px 0px 2.7rem;
+  border-left: dashed 1px rgba(86, 122, 132, 0.2);
+}
+.PopupMenu #layout-menu > li ul li a {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-family: 'dosisregular';
+  color: #567a84;
+  text-align: left;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.PopupMenu #layout-menu > li ul li a:hover,
+.PopupMenu #layout-menu > li ul li a:active,
+.PopupMenu #layout-menu > li ul li a.active-menu {
+  background-color: rgba(86, 122, 132, 0.15);
+}
+.PopupMenu #layout-menu > li ul li a i {
+  margin-right: 7px;
+  font-size: 1.5rem;
+}
+/* PORTLETS --------------------------------------------------------------------------------*/
+/*Layout Portlets Cover*/
+#layout-portlets-cover {
+  width: 100%;
+  height: auto;
+  display: block;
+  font-size: 16px;
+  color: #3e5e66;
+  padding: 10rem 11rem 3rem 11rem;
+  box-sizing: border-box;
+  background-color: #f0f2f5;
+}
+.PopupMenu #layout-portlets-cover {
+  padding: 7rem 11rem 3rem 11rem;
+}
+/* Cards */
+.Card {
+  width: 100%;
+  display: block;
+  padding: 2.4rem;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-bottom: solid 1px #DFE1E4;
+}
+.CardBigTopic {
+  display: block;
+  font-family: 'dosismedium';
+  font-size: 2rem;
+  padding: 0px 0px 1rem 0px;
+  color: #3e5e66;
+}
+.CardSmallTopic {
+  display: block;
+  font-family: 'dosismedium';
+  font-size: 1.6rem;
+  padding: 1rem 0px;
+  color: #3e5e66;
+}
+/* FOOTER --------------------------------------------------------------------------------*/
+/*Layout Footer*/
+#layout-footer {
+  width: 100%;
+  overflow: hidden;
+  background-color: #454546;
+  border-bottom: solid 1px #373738;
+}
+#layout-footer-top {
+  width: 100%;
+  background-color: #373738;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 1rem 11rem;
+}
+#footer-logo {
+  display: inline-block;
+  float: left;
+}
+#footer-logo img {
+  height: 1.6rem;
+  vertical-align: middle;
+}
+#footer-info {
+  display: inline-block;
+  float: right;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'dosisregular';
+}
+#layout-footer-bottom {
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 11rem;
+  box-sizing: border-box;
+}
+.footer-social {
+  font-size: 3rem;
+  display: inline-block;
+  float: right;
+  color: #edf3f6;
+}
+/* LAYOUT STANDART STYLES -----------------------------------------------------------------*/
+a {
+  text-decoration: none;
+  outline: none;
+}
+img {
+  outline: none;
+}
+li {
+  list-style: none;
+}
+/* text colors */
+.White {
+  color: #ffffff !important;
+}
+.TransparentWhite {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.SoftGray {
+  color: #F1F2F2 !important;
+}
+.Black {
+  color: #2F2F2F !important;
+}
+.Blue {
+  color: #3E98D3 !important;
+}
+.Red {
+  color: #EF3F61 !important;
+}
+.Teal {
+  color: #109B91 !important;
+}
+.Green {
+  color: #2BB673 !important;
+}
+.Cyan {
+  color: #00ACC1 !important;
+}
+.Orange {
+  color: #F15732 !important;
+}
+.Leaden {
+  color: #567A84 !important;
+}
+.BoldLeaden {
+  color: #3E5E66 !important;
+}
+.Purple {
+  color: #555574 !important;
+}
+/* background colors */
+.WhiteBack {
+  background-color: #fff !important;
+}
+.SoftGrayBack {
+  background-color: #EDF3F6 !important;
+}
+.BlackBack {
+  background-color: #2F2F2F !important;
+}
+.BlueBack {
+  background-color: #3E98D3 !important;
+}
+.RedBack {
+  background-color: #EF3F61 !important;
+}
+.TealBack {
+  background-color: #109B91 !important;
+}
+.GreenBack {
+  background-color: #2BB673 !important;
+}
+.CyanBack {
+  background-color: #00ACC1 !important;
+}
+.OrangeBack {
+  background-color: #F15732 !important;
+}
+.LeadenBack {
+  background-color: #567A84 !important;
+}
+.BoldLeadenBack {
+  background-color: #3E5E66 !important;
+}
+.PurpleBack {
+  background-color: #555574 !important;
+}
+/* seperator line */
+.Separator {
+  border-bottom: solid 1px #c6d6df;
+  width: 100%;
+  overflow: hidden;
+  height: 0px;
+  margin: 10px 0px;
+  clear: both;
+}
+.SeparatorFull {
+  border-bottom: solid 1px #c6d6df;
+  display: block;
+  overflow: hidden;
+  height: 0px;
+  margin: 10px -2.4rem;
+  clear: both;
+}
+/* hover effect for boxlink and links */
+.HoverEffect {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.HoverEffect:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* shadow */
+.ShadowEffect {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 0\0) {
+  /* IE 10+ specific styles go here */
+  .ShadowEffect {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
+  }
+}
+/* headings */
+.Heading1 {
+  font-family: 'dosissemibold';
+  font-size: 4rem;
+  padding: 10px 0px;
+  margin: 0px;
+}
+.Heading2 {
+  font-family: 'dosissemibold';
+  font-size: 3.5rem;
+  padding: 10px 0px;
+  margin: 0px;
+}
+.Heading3 {
+  font-family: 'dosissemibold';
+  font-size: 3rem;
+  padding: 10px 0px;
+  margin: 0px;
+}
+.Heading4 {
+  font-family: 'dosissemibold';
+  font-size: 2.5rem;
+  padding: 10px 0px;
+  margin: 0px;
+}
+.Heading5 {
+  font-family: 'dosismedium';
+  font-size: 2rem;
+  padding: 10px 0px;
+  margin: 0px;
+}
+.Heading6 {
+  font-family: 'dosismedium';
+  font-size: 16px;
+  padding: 10px 0px;
+  margin: 0px;
+}
+/* For Docs Pages Demo */
+.changecolor:hover {
+  background-color: #FBB040 !important;
+  padding: 20px;
+}
+/* MEDIA QUERIES **************************************************************************************************************** */
+/* Large desktop */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  /* Layout Menu Cover */
+  #layout-menu > li > a {
+    text-align: center;
+  }
+  #layout-menu > li > a i {
+    display: block;
+    margin: 0px;
+  }
+}
+@media (min-width: 961px) and (max-width: 1200px) {
+  html {
+    font-size: 9px;
+  }
+  /* For Sizing With REM Unit */
+  /* Layout Topbar Cover*/
+  #layout-topbar-cover {
+    padding: 0px 8rem;
+  }
+  /* Layout Menu Cover */
+  #layout-menu-cover {
+    padding: 0px 8rem;
+  }
+  #layout-menu > li > a {
+    text-align: center;
+  }
+  #layout-menu > li > a i {
+    display: block;
+    margin: 0px;
+  }
+  /* Layout Menu Cover ( For Popup Menu Style )*/
+  .PopupMenu #layout-menu-cover {
+    left: 8rem;
+  }
+  /*Layout Portlets Cover*/
+  #layout-portlets-cover {
+    padding: 12rem 8rem 3rem 8rem;
+  }
+  .PopupMenu #layout-portlets-cover {
+    padding: 7rem 8rem 3rem 8rem;
+  }
+  /*Layout Footer*/
+  #layout-footer-top,
+  #layout-footer-bottom {
+    padding: 1rem 8rem;
+  }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 640px) and (max-width: 960px) {
+  html {
+    font-size: 9px;
+  }
+  /* For Sizing With REM Unit */
+  /* Layout Topbar Cover*/
+  #layout-topbar-cover {
+    padding: 0px 4rem;
+  }
+  /* menu button */
+  #menu-button {
+    display: inline-block;
+  }
+  /* Layout Menu Cover */
+  #layout-menu-cover {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 0px;
+    left: 4rem;
+    position: fixed;
+    top: 5rem;
+    z-index: 9998;
+    display: none;
+    height: 0px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  }
+  #layout-menu-cover.active {
+    display: block;
+    height: auto;
+    overflow-y: auto !important;
+  }
+  #layout-menu {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+  }
+  #layout-menu > li {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    border-right: 0px;
+    display: block;
+  }
+  #layout-menu > li:first-child {
+    border-left: 0px;
+  }
+  #layout-menu > li > a {
+    display: block;
+    padding: 1.4rem 2rem;
+    font-size: 1.6rem;
+    color: #567a84;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  #layout-menu > li > a:hover,
+  #layout-menu > li > a:active,
+  #layout-menu > li > a.active-menu {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #layout-menu > li > a i {
+    margin-right: 7px;
+    font-size: 1.5rem;
+  }
+  /* Second Level Of Menu */
+  #layout-menu > li > ul {
+    max-height: initial;
+    max-height: none;
+  }
+  #layout-menu > li ul {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    background-color: #fff;
+    overflow: hidden;
+    height: 0px;
+  }
+  #layout-menu > li > ul {
+    border-bottom: 0px;
+    border-radius: 0;
+    position: static;
+    width: auto;
+  }
+  #layout-menu > li ul.active-menu {
+    height: auto !important;
+  }
+  #layout-menu > li ul li {
+    display: block;
+    padding: 0px;
+    margin: 0px 0px 0px 2.7rem;
+    border-left: dashed 1px rgba(86, 122, 132, 0.2);
+  }
+  #layout-menu > li ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: #567a84;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  #layout-menu > li ul li a:hover,
+  #layout-menu > li ul li a:active,
+  #layout-menu > li ul li a.active-menu {
+    background-color: rgba(86, 122, 132, 0.15);
+  }
+  #layout-menu > li ul li a i {
+    margin-right: 7px;
+    font-size: 1.5rem;
+  }
+  /* Layout Menu Cover ( For Popup Menu Style )*/
+  .PopupMenu #layout-menu-cover {
+    left: 4rem;
+  }
+  /*Layout Portlets Cover*/
+  #layout-portlets-cover {
+    padding: 7rem 4rem 2rem 4rem;
+  }
+  .PopupMenu #layout-portlets-cover {
+    padding: 7rem 4rem 2rem 4rem;
+  }
+  /*Layout Footer*/
+  #layout-footer-top,
+  #layout-footer-bottom {
+    padding: 1rem 4rem;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (min-width: 480px) and (max-width: 640px) {
+  html {
+    font-size: 8px;
+  }
+  /* For Sizing With REM Unit */
+  /* Layout Topbar Cover*/
+  #layout-topbar-cover {
+    padding: 0px 2rem;
+  }
+  /* menu button */
+  #menu-button {
+    display: inline-block;
+  }
+  /* top menu button */
+  #topmenu-button {
+    display: inline-block;
+  }
+  /* topbar menu */
+  #topbar-menu {
+    width: 200px;
+    position: fixed;
+    z-index: 9999;
+    right: 2rem;
+    top: 5rem;
+    background-color: #fff;
+    border-bottom: solid 1px #DFE1E4;
+    overflow: hidden;
+    height: 0px;
+    display: none;
+    border-radius: 3px;
+  }
+  #topbar-menu.active {
+    height: auto;
+    display: block;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  }
+  #topbar-menu > li {
+    display: block;
+    width: 100%;
+  }
+  #topbar-menu > li a {
+    padding: 1.5rem;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #567a84;
+  }
+  #topbar-menu > li a:hover,
+  #topbar-menu > li a:active,
+  #topbar-menu > li a.active {
+    background-color: rgba(86, 122, 132, 0.15);
+  }
+  #topbar-menu > li a i {
+    font-size: 2rem;
+    color: #567a84;
+  }
+  #topbar-menu > li a.active i {
+    color: rgba(0, 0, 0, 0.4);
+  }
+  #topbar-menu > li a .bubble {
+    margin: -1.3rem 0px 0px -8rem;
+  }
+  #topbar-menu > li a .tb-menu-text {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-left: 5px;
+  }
+  /* Layout Menu Cover */
+  #layout-menu-cover {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 0px;
+    left: 2rem;
+    position: fixed;
+    top: 5rem;
+    z-index: 9999;
+    display: none;
+    height: 0px;
+    border-radius: 3px;
+    border-bottom: solid 1px #DFE1E4;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  }
+  #layout-menu-cover.active {
+    display: block;
+    height: auto;
+    overflow-y: auto !important;
+  }
+  #layout-menu {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+  }
+  #layout-menu > li {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    border-right: 0px;
+    display: block;
+  }
+  #layout-menu > li:first-child {
+    border-left: 0px;
+  }
+  #layout-menu > li > a {
+    display: block;
+    padding: 1.6rem 2rem;
+    font-size: 1.8rem;
+    color: #567a84;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  #layout-menu > li > a:hover,
+  #layout-menu > li > a:active,
+  #layout-menu > li > a.active-menu {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #layout-menu > li > a i {
+    margin-right: 7px;
+    font-size: 1.5rem;
+  }
+  /* Second Level Of Menu */
+  #layout-menu > li > ul {
+    max-height: initial;
+    max-height: none;
+  }
+  #layout-menu > li ul {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    background-color: #fff;
+    overflow: hidden;
+    height: 0px;
+  }
+  #layout-menu > li > ul {
+    border-bottom: 0px;
+    border-radius: 0;
+    position: static;
+    width: auto;
+  }
+  #layout-menu > li ul.active-menu {
+    height: auto !important;
+  }
+  #layout-menu > li ul li {
+    display: block;
+    padding: 0px;
+    margin: 0px 0px 0px 2.7rem;
+    border-left: dashed 1px rgba(86, 122, 132, 0.2);
+  }
+  #layout-menu > li ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    color: #567a84;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  #layout-menu > li ul li a:hover,
+  #layout-menu > li ul li a:active,
+  #layout-menu > li ul li a.active-menu {
+    background-color: rgba(86, 122, 132, 0.15);
+  }
+  #layout-menu > li ul li a i {
+    margin-right: 7px;
+    font-size: 1.5rem;
+  }
+  /* Layout Menu Cover ( For Popup Menu Style )*/
+  .PopupMenu #layout-menu-cover {
+    left: 2rem;
+    z-index: 9999;
+  }
+  .PopupMenu #layout-menu > li > a {
+    padding: 1.4rem 2rem;
+    font-size: 1.8rem;
+  }
+  .PopupMenu #layout-menu > li ul li a {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+  /*Layout Portlets Cover*/
+  #layout-portlets-cover {
+    padding: 7rem 2rem 2rem 2rem;
+  }
+  .PopupMenu #layout-portlets-cover {
+    padding: 7rem 2rem 2rem 2rem;
+  }
+  /*Layout Footer*/
+  #layout-footer-top,
+  #layout-footer-bottom {
+    padding: 2rem 2rem;
+  }
+}
+/* Portrait phones and down */
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 8px;
+  }
+  /* For Sizing With REM Unit */
+  /* Layout Topbar Cover*/
+  #layout-topbar-cover {
+    padding: 0px 2rem;
+  }
+  /* menu button */
+  #menu-button {
+    display: inline-block;
+  }
+  /* top menu button */
+  #topmenu-button {
+    display: inline-block;
+  }
+  /* topbar menu */
+  #topbar-menu {
+    width: 200px;
+    position: fixed;
+    z-index: 9999;
+    right: 2rem;
+    top: 5rem;
+    background-color: #fff;
+    border-bottom: solid 1px #DFE1E4;
+    overflow: hidden;
+    height: 0px;
+    display: none;
+    border-radius: 3px;
+  }
+  #topbar-menu.active {
+    height: auto;
+    display: block;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  }
+  #topbar-menu > li {
+    display: block;
+    width: 100%;
+  }
+  #topbar-menu > li a {
+    padding: 1.5rem;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #567a84;
+  }
+  #topbar-menu > li a:hover,
+  #topbar-menu > li a:active,
+  #topbar-menu > li a.active {
+    background-color: rgba(86, 122, 132, 0.15);
+  }
+  #topbar-menu > li a i {
+    font-size: 2rem;
+    color: #567a84;
+  }
+  #topbar-menu > li a.active i {
+    color: rgba(0, 0, 0, 0.4);
+  }
+  #topbar-menu > li a .bubble {
+    margin: -1.3rem 0px 0px -8rem;
+  }
+  #topbar-menu > li a .tb-menu-text {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-left: 5px;
+  }
+  /* Layout Menu Cover */
+  #layout-menu-cover {
+    width: 290px;
+    box-sizing: border-box;
+    padding: 0px;
+    left: 2rem;
+    position: fixed;
+    top: 5rem;
+    z-index: 9999;
+    display: none;
+    height: 0px;
+    border-radius: 3px;
+    border-bottom: solid 1px #DFE1E4;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  }
+  #layout-menu-cover.active {
+    display: block;
+    height: auto;
+    overflow-y: auto !important;
+  }
+  #layout-menu {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+  }
+  #layout-menu > li {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    border-right: 0px;
+    display: block;
+  }
+  #layout-menu > li:first-child {
+    border-left: 0px;
+  }
+  #layout-menu > li > a {
+    display: block;
+    padding: 1.6rem 2rem;
+    font-size: 1.6rem;
+    color: #567a84;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  #layout-menu > li > a:hover,
+  #layout-menu > li > a:active,
+  #layout-menu > li > a.active-menu {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #layout-menu > li > a i {
+    margin-right: 7px;
+    font-size: 1.5rem;
+  }
+  /* Second Level Of Menu */
+  #layout-menu > li > ul {
+    max-height: initial;
+    max-height: none;
+  }
+  #layout-menu > li ul {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    background-color: #fff;
+    overflow: hidden;
+    height: 0px;
+  }
+  #layout-menu > li > ul {
+    border-bottom: 0px;
+    border-radius: 0;
+    position: static;
+    width: auto;
+  }
+  #layout-menu > li ul.active-menu {
+    height: auto !important;
+  }
+  #layout-menu > li ul li {
+    display: block;
+    padding: 0px;
+    margin: 0px 0px 0px 2.7rem;
+    border-left: dashed 1px rgba(86, 122, 132, 0.2);
+  }
+  #layout-menu > li ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: #567a84;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  #layout-menu > li ul li a:hover,
+  #layout-menu > li ul li a:active,
+  #layout-menu > li ul li a.active-menu {
+    background-color: rgba(86, 122, 132, 0.15);
+  }
+  #layout-menu > li ul li a i {
+    margin-right: 7px;
+    font-size: 1.5rem;
+  }
+  /* Layout Menu Cover ( For Popup Menu Style )*/
+  .PopupMenu #layout-menu-cover {
+    width: 290px;
+    left: 2rem;
+    z-index: 9999;
+  }
+  .PopupMenu #layout-menu > li > a {
+    padding: 1.6rem 2rem;
+    font-size: 1.6rem;
+  }
+  .PopupMenu #layout-menu > li ul li a {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+  }
+  /*Layout Portlets Cover*/
+  #layout-portlets-cover {
+    padding: 7rem 2rem 2rem 2rem;
+  }
+  .PopupMenu #layout-portlets-cover {
+    padding: 7rem 2rem 2rem 2rem;
+  }
+  /*Layout Footer*/
+  #layout-footer-top,
+  #layout-footer-bottom {
+    padding: 2rem 2rem;
+  }
+}
+/* -------------------------------------------------------------------*/
+/* OTHERS */
+#layout-portlets-cover:before,
+#layout-portlets-cover:after,
+.Card:before,
+.Card:after {
+  content: "";
+  display: table;
+  border-collapse: collapse;
+}
+#layout-portlets-cover:after,
+.Card:after {
+  clear: both;
+}
+/**/
+#atlas-highlight {
+  background-image: url("#{resource['atlas-layout:images/landing-page-highlightback.svg']}");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Atlas */
+/* html */
+/* Topbar ==================================================== */
+/**/
+/* Layout Menu ==================================================== */
+/* Popup Menu */
+/**/
+/* Layout Portlets Cover ==================================================== */
+/* Cards */
+.card-border-radius {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+/**/
+/* Layout Portlets Cover ==================================================== */
+/**/
+/* others */
+/**/
+/* @media (min-width: 640px) and (max-width: 960px) */
+/* @media (min-width: 480px) and (max-width: 640px) */
+/* @media (min-width:320px) and (max-width: 480px) */
+/**/
+/**/
+/* misc */
+/* transitions */
+.short-transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.medium-transition {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.long-transition {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.no-transition {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.no-transform {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -o-transform: none !important;
+  -ms-transform: none !important;
+  transform: none !important;
+}
+/*# sourceMappingURL=atlas-layout.css.map */
