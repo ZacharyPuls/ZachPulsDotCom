@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pa="http://primefaces.org/atlas">
+
+<h:head>
+    <f:facet name="first">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+    </f:facet>
+    <title><ui:insert name="title" /></title>
+
+    <h:outputScript name="js/equalize.js" library="atlas-layout" />
+    <h:outputScript name="js/layout.js" library="atlas-layout" />
+
+    <ui:insert name="head" />
+</h:head>
+
+<h:body styleClass="TealTopbar SoftGrayBack">
+
+    <h:form id="frmMenu">
+        <div id="layout-topbar-cover">
+        <div id="layout-topbar">
+            <pa:menu id="layout-menu">
+                <p:menuitem id="mnuHome" value="Home" icon="fa fa-home" onclick="window.location.replace('/')" />
+                <p:menuitem id="mnuAbout" value="About" icon="fa fa-question" onclick="window.location.replace('about')" />
+                <p:menuitem id="mnuHomeLab" value="HomeLab" icon="fa fa-server" onclick="window.location.replace('homelab')" />
+                <p:menuitem id="mnuContact" value="Contact" icon="fa fa-paper-plane" onclick="window.location.replace('contact')" />
+                <p:menuitem id="mnuBlog" value="Blog" icon="fa fa-comment" onclick="window.location.replace('http://blog.zachpuls.com')" />
+            </pa:menu>
+        </div>
+        </div>
+    </h:form>
+
+    <div id="layout-portlets-cover">
+        <div class="Container100">
+            <div class="ContainerIndent">
+                <div class="ShadowBox TexAlCenter whiteback BlueBorderedBox">
+                    <ui:insert name="content" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p:ajaxStatus style="width:40px; height:40px; position:fixed; right:30px; bottom:30px; z-index:999999;">
+        <f:facet name="start">
+            <i class="fa fa-circle-o-notch fa-spin Green Fs40"></i>
+        </f:facet>
+
+        <f:facet name="complete">
+            <h:outputText value="" />
+        </f:facet>
+    </p:ajaxStatus>
+
+    <h:outputStylesheet name="css/core-layout.css" library="atlas-layout" />
+    <h:outputStylesheet name="css/animate.css" library="atlas-layout" />
+    <h:outputStylesheet name="css/font-awesome.css" library="atlas-layout" />
+    <h:outputStylesheet name="css/atlas-font.css" library="atlas-layout" />
+    <h:outputStylesheet name="css/atlas-layout.css" library="atlas-layout" />
+</h:body>
+
+</html>

@@ -1,0 +1,44 @@
+<ui:composition template="WEB-INF/template.xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <ui:define name="title">
+        Zach Puls -- About
+    </ui:define>
+
+    <ui:define name="head">
+
+    </ui:define>
+
+    <ui:define name="content">
+        <div class="Fs16">
+            <h:outputText value="My spare bedroom serves as my 'datacenter' for the house." />
+            <br />
+            <h:outputText value="The rack is a 24U Tripp Lite Rack, and is fed by 20 Amp circuits feeding power to a quad wall socket,
+            which powers my 1000VA Tripp Lite UPS. In the rack, I have:" />
+            <br />
+            <br />
+            <h:outputText value="An Ubiquiti 802.11ac Access Point (Not Shown)" />
+            <br />
+            <h:outputText value="One Cisco Catalyst 3750G, 24-Port Switch (Core)" />
+            <br />
+            <h:outputText value="Two Cisco Catalyst 2960G, 24-Port Switches (Access)" />
+            <br />
+            <h:outputText value="A Cisco 2851, which I have set up for DHCP, NAT, and a default route to Cox.
+            Gi0/0 is the incoming connection from the modem, and Gi0/1 is internal." />
+            <br />
+            <h:outputText value="Two DELL PowerEdge 2950s. One is a Gen III, with 6 300GB 15K RPM drives. The other is a Gen II,
+            with two 7.2K RPM 1TB drives. These are my clustering hosts, used for misc VMs and to test DRS/vMotion." />
+            <br />
+            <h:outputText value="A massive 4U/24-bay custom server I built. It is a Supermicro X10SRL-F, with an Intel Xeon E5-1650v3
+            (6c/12t @ 3.5/3.8 GHz), 96GB of DDR4 2133 MT/s ECC RAM, booting off of USB for ESXi. It has 16TB of 7.2K RPM storage, and
+            500GB of flash. This is my main VMware host, where I put all of my main VMs. These are backed up nightly." />
+            <br />
+            <h:outputText value="A Cisco 2811 for DMZ. Fa0/0 is internal network, Fa0/1 is DMZ. This is mainly for testing." />
+            <br />
+            <h:outputText value="An HP DL580 G2 I got from work. I'm afraid to see what my power bill would be if I turned this on for any
+            large length of time, so it is mainly not used." />
+            <br />
+        </div>
+        <h:graphicImage></h:graphicImage>
+    </ui:define>
+</ui:composition>
