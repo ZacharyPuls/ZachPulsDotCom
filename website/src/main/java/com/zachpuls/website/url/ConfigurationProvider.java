@@ -27,7 +27,7 @@ public class ConfigurationProvider extends HttpConfigurationProvider {
                 .addRule().when(Direction.isInbound().and(Path.matches("/homelab")))
                 .perform(Forward.to("/f/homelab.xhtml"))
                 .addRule().when(Direction.isInbound().and(Path.matches("/contact")))
-                .perform(Forward.to("/f/index.xhtml"))
+                .perform(Forward.to("/f/contact.xhtml"))
                 .addRule().when(Direction.isInbound().and(Path.matches("/blog")))
                 .perform(Forward.to("/f/index.xhtml"));
     }

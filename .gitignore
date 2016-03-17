@@ -7,4 +7,6 @@ hs_err_pid*
 
 # Directories
 .idea/*
-target/*
+blog/target/*
+website/target/*
+website/src/main/webapp/WEB-INF/captcha-key.properties

@@ -1,0 +1,45 @@
+<ui:composition template="WEB-INF/template.xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:p="http://primefaces.org/ui">
+    <ui:define name="title">
+        Zach Puls -- Contact
+    </ui:define>
+
+    <ui:define name="head">
+        <style type="text/css">
+            .CenterPanel {
+                margin: 0 auto;
+            }
+        </style>
+    </ui:define>
+
+    <ui:define name="content">
+        <p:growl severity="info,error" showDetail="true"  />
+        <div class="Fs16">
+            <h:outputText value="Please fill out your name, message, and CAPTCHA to contact me." />
+            <br />
+            <br />
+            <h:form id="frmContact">
+
+                <p:panelGrid columns="2" styleClass="CenterPanel">
+                    <p:outputLabel value="First Name: " />
+                    <p:inputText id="txtFirstName" value="#{contactForm.firstName}"
+                                 required="true" requiredMessage="Please enter your first name" />
+
+                    <p:outputLabel value="Last Name: " />
+                    <p:inputText id="txtLastName" value="#{contactForm.lastName}"
+                                 required="true" requiredMessage="Please enter your last name" />
+
+                    <p:outputLabel value="Message: " />
+                    <p:inputTextarea id="txtMessage" value="#{contactForm.message}"
+                                     required="true" requiredMessage="Please enter a message" />
+
+                    <p:outputLabel value="" />
+                    <p:captcha id="objCaptcha" label="CAPTCHA" requiredMessage="You must complete the CAPTCHA" />
+
+                    <p:commandButton value="Submit" ajax="false" actionListener="#{contactForm.submit}" />
+                </p:panelGrid>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>
