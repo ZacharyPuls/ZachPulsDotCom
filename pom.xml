@@ -2,24 +2,50 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zachpuls</groupId>
-    <artifactId>website-master</artifactId>
+    <artifactId>website</artifactId>
     <version>1.0</version>
-    <packaging>pom</packaging>
+    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <jetty.version>9.3.7.v20160115</jetty.version>
+        <jetty.version>9.3.8.v20160314</jetty.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
-    <modules>
-        <module>blog</module>
-        <module>website</module>
-    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.0.53-beta</version>
+        </dependency>
 
         <!-- Jetty -->
         <dependency>
@@ -45,6 +71,12 @@
             <groupId>javax.enterprise</groupId>
             <artifactId>cdi-api</artifactId>
             <version>1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>3.0.0</version>
         </dependency>
 
         <dependency>
@@ -74,6 +106,12 @@
             <groupId>org.ocpsoft.rewrite</groupId>
             <artifactId>rewrite-config-prettyfaces</artifactId>
             <version>2.0.12.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-ses</artifactId>
+            <version>1.10.54</version>
         </dependency>
 
     </dependencies>
